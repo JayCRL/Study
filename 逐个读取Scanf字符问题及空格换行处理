@@ -1,0 +1,40 @@
+#include <stdio.h>
+int main() {
+	char a1[100] = { 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z' };
+	char a2[100] = { 'B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','A' };
+	char c = '0';
+	int flage = 0;
+	while(1){
+		c = getchar();
+		flage = 0;
+		if (c =='\n') {
+			break;
+		}
+		if (c == 32) {
+			printf(" ");
+			flage++;
+		}
+		if (c>'0'&&c<'9') {
+			printf("%c",c);
+			flage++;
+		}
+		for (int i = 0; i < 26; i++) {
+		if (c == a1[i]) {
+			printf("%c", a2[i]);
+			flage++;
+		}
+		if (c == a2[i]) {
+			if (i + 2 < 26) {
+				printf("%c", a1[i + 2]);
+			}
+			else {
+				printf("%c", a1[i + 2 - 26]);
+			}
+			flage++;
+		}
+	}
+		if (flage == 0) {
+			printf("%c", c);
+		}
+}
+}
