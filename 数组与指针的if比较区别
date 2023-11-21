@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main() {
+	char arr[10] = "abc";
+	char arr2[10] = "abc";
+	char* p1 = "abc";
+	char* p2 = "abc";
+	if (arr==arr2) {//比的是数组的地址
+		printf("666");
+	}
+	if (p1==p2) {//比的是指针里的值
+		printf("555");
+	}
+	printf("\n%d %d %d %d",arr,arr2,p1,p2);//但是四个地址全不相同
+}
+//如果是数组比的是数组的地址
+//如果是指针直接比比的是指针里存的地址
