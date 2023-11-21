@@ -9,3 +9,9 @@ int main() {
 	printf("%s\n",p);
 	printf("%c\n",*p);
 }
+
+OUTPUT:
+abcdef
+d
+abcdef
+a
