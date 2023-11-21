@@ -1,0 +1,11 @@
+#include <stdio.h>
+//%s 从首地址开始打印直到遇到\0 对数组（直接写数组名） 对指针（指针）
+//%c 直接打印字符 对数组 数组名[] 对指针要解引用
+int main() {
+	char arr[] = "abcdef";
+	char* p = "abcdef";
+	printf("%s\n",arr);
+	printf("%c\n",arr);//错误的 
+	printf("%s\n",p);
+	printf("%c\n",*p);
+}
